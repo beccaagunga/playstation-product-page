@@ -16,19 +16,22 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
       <!-- javascript -->
       <script src="js/script.js"></script>
-    <title>DualShock 4 Wireless Controller</title>
+    <title>DUALSHOCK® 4 Wireless Controller</title>
   </head>
   <body>
     <div class="container">
          <div class="left"></div>
          <div class="right"></div>
+         <div class="overlay">
+           <img class="overlay-img" src="img/logo.svg" alt="PS4">
+         </div>
 
          <div class="nav">
-               <a href="#"><div class="logo"><img src="img/logo.svg" alt="PS4"></div></a>
+               <a href="#"><div class="logo"><img class="main-logo"src="img/logo.svg" alt="PS4"></div></a>
 
                <div class="next"><i class="fa fa-angle-right"></i></div>
 
-               <div class="watch"><i class="fa fa-caret-right"></i>&nbsp; watch tutorial</div>
+               <div class="search"><i class="fas fa-search"></i><input type="text" placeholder="&nbsp; Search"></input></div>
 
                <a href="#"><div class="cart"><i class="fa fa-shopping-cart"></i></div></a>
          </div>
@@ -55,13 +58,23 @@
 
                <h1 class="product-title">DUALSHOCK® 4</h1>
 
-               <p>The DUALSHOCK®4 Wireless Controller for PlayStation® 4 defines this generation of play,
+               <p class="desc">The DUALSHOCK®4 Wireless Controller for PlayStation® 4 defines this generation of play,
                  combining revolutionary features and comfort with intuitive,
                  precision controls. Evolved analog sticks and trigger buttons allow for
                  unparalleled accuracy with every move while innovative technologies offer exciting
-                 ways to experience your games and share your greatest moments.</p>
-              <div class="color" id="color"><i class="fas fa-circle fa-2x"></i></div>
-              
+                 ways to experience your games and share your greatest moments.
+               </p>
+              <div class="color" id="color">
+                  <p class="choose">Choose your color:</p>
+                <ul>
+                <li><i class="fas fa-circle fa-2x ctrl black"></i></li>
+                <li><i class="fas fa-circle fa-2x ctrl white"></i></li>
+                <li><i class="fas fa-circle fa-2x ctrl purple"></i></li>
+                </ul>
+              </div>
+
+
+
                <p id="price">Price: USD $64.99</p>
 
                <button type="submit" class="btn">BUY NOW</button>
@@ -81,6 +94,109 @@
          </div>
 
    </div>
+<script>
+// slides overlay up
+TweenMax.to(".overlay", 1, {
+     delay: 1,
+     top: "-100%",
+     ease: Expo.easeInOut
+})
+//  overlay img slides up
+TweenMax.to(".overlay-img", 2, {
+      opacity: 0,
+      y: -60,
+      ease: Expo.easeInOut
+})
+// slides logo box to right
+TweenMax.from(".logo", 3.5, {
+          delay: 0.6,
+          // opacity: 0,
+          // x: -20,
+          width: 0,
+          ease: Expo.easeInOut
+    });
+// slides logo to right
+TweenMax.from(".main-logo", 3.5, {
+          delay: 0.6,
+          // opacity: 0,
+          // x: -20,
+          width: 0,
+          ease: Expo.easeInOut
+    });
+// slides right (grey) side over left to right
+TweenMax.from(".right", 3.5, {
+          delay: 0.6,
+          // opacity: 0,
+          // x: -20,
+          width: 0,
+          ease: Expo.easeInOut
+    });
+// slides product title up
+ TweenMax.from(".product-title", 2, {
+         delay: 1.6,
+         opacity: 0,
+         y: 20,
+         ease: Expo.easeInOut
+   });
+// staggers right ul
+   TweenMax.staggerFrom(".right-sidebar ul li", 1, {
+            delay: 2.6,
+            opacity: 0,
+            y: 20,
+            ease: Power3.easeInOut
+      }, 0.08);
+// slides 'greatness' up
+      TweenMax.from(".left-bottom", 2, {
+          delay: 2.8,
+          opacity: 0,
+          y: 20,
+          ease: Expo.easeInOut
+    });
+// slides desc up
+     TweenMax.from(".desc", 2, {
+      delay: 1.8,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+});
+// slides color up
+TweenMax.from(".color", 2, {
+ delay: 1.8,
+ opacity: 0,
+ y: 20,
+ ease: Expo.easeInOut
+});
+// slides price up
+TweenMax.from("#price", 2, {
+      delay: 2,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+});
+//slides buy now up
+TweenMax.from(".btn", 2, {
+      delay: 2.2,
+      opacity: 0,
+      y: 20,
+      ease: Expo.easeInOut
+});
+// staggers media icons up
+TweenMax.staggerFrom(".media ul li", 1, {
+          delay: 3.6,
+          opacity: 0,
+          y: 20,
+          ease: Power3.easeInOut
+    }, 0.08);
+    TweenMax.from(".product img", 5, {
+         delay: 2,
+         // opacity: 0,
+         // y: 20,
+         scale: 0,
+         ease: Expo.easeOut
+   });
+
+</script>
+
 
   </body>
 </html>

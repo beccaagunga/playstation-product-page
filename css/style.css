@@ -1,9 +1,12 @@
 /* variables */
 :root {
-  --black: #000000;
+  --black: 303136;
   --ps4blue: #0171CC;
   --sans: 'Open Sans', sans-serif;
   --light: 300;
+  --white: #E9E9EA;
+  --grey: #e0e0e0;
+  --purple: #8670B9;
 }
 /* base styles */
 a:visited {
@@ -33,6 +36,26 @@ html, body {
       padding: 0;
 }
 
+/* overlay */
+.overlay {
+      z-index: 1;
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background: #fff;
+      top: 0%:
+}
+
+.overlay img {
+  position: absolute;
+  left: 40%;
+  bottom: 35%;
+  width: 250px;
+  height: 250px;
+}
+
+/* begin site */
+
 .left, .right {
       position: absolute;
       height: 100%;
@@ -45,7 +68,7 @@ html, body {
 
 .right {
       left: 50%;
-      background: #e0e0e0;
+      background: var(--grey);
 }
 
 .nav {
@@ -65,7 +88,7 @@ html, body {
       padding: 10px;
 }
 
-.watch, .cart {
+.search, .cart {
       line-height: 80px;
       position: absolute;
       padding: 10px;
@@ -81,15 +104,30 @@ html, body {
       left: 280px;
 }
 
-.watch {
+.search {
       right: 220px;
       color: grey;
       font-weight: lighter;
       text-transform: uppercase;
+      color: var(--ps4blue);
+      padding: 0;
+
+}
+
+.search input {
+  border: none;
+  padding: 10px;
+  background: transparent;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-bottom: .5px solid rgb(162, 162, 162);
+  margin-left: 1rem;
+  letter-spacing: 1px;
+
 }
 
 .cart {
-      right: 70px;
+  right: 70px;
 }
 
 .right-sidebar {
@@ -143,12 +181,6 @@ html, body {
   height: 300px;
 }
 
-.circle {
-  background-color: red;
-  border-radius: 50%;
-  color: red;
-}
-
 @keyframes fly {
       0% {
             transform: translate(-50%, -46%);
@@ -166,7 +198,7 @@ html, body {
 .left-bottom {
       position: absolute;
       left: 60px;
-      bottom: 40px;
+      bottom: 20px;
       letter-spacing: 3px;
       color: grey;
       text-transform: uppercase;
@@ -206,9 +238,31 @@ html, body {
       font-size: .9rem;
 }
 
-.fa-circle {
-  color: #D8D9DB;
+/* controller colors */
+
+.color ul {
+  padding: 0;
 }
+
+.color li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 .5rem;
+}
+
+.black {
+  color: --var(--black);
+}
+
+.white {
+  color: var(--white);
+}
+
+.purple {
+  color: var(--purple);
+}
+
+
 
 
 #price {
@@ -220,7 +274,7 @@ html, body {
 
 .media {
       position: absolute;
-      bottom: 40px;
+      bottom: 20px;
       right: 60px;
 }
 
