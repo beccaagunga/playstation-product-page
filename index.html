@@ -29,17 +29,17 @@
          <div class="nav">
                <a href="#"><div class="logo"><img class="main-logo"src="img/logo.svg" alt="PS4"></div></a>
 
-               <div class="next"><i class="fa fa-angle-right"></i></div>
+               <a href="#"><div class="cart"><i class="fa fa-shopping-cart"></i></div></a>
 
                <div class="search"><i class="fas fa-search"></i><input type="text" placeholder="&nbsp; Search"></input></div>
 
-               <a href="#"><div class="cart"><i class="fa fa-shopping-cart"></i></div></a>
+
          </div>
 
          <div class="right-sidebar">
 
                <ul>
-                     <a href="#"><li class="title">Shop</li></a>
+                     <a href="#"><li class="shop">Shop</li></a>
                      <a href="#"><li>Playstation 4</li></a>
                      <a href="#"><li>Controllers</li></a>
                      <a href="#"><li>Audio</li></a>
@@ -94,108 +94,110 @@
          </div>
 
    </div>
-<script>
-// slides overlay up
-TweenMax.to(".overlay", 1, {
+
+  <script>
+    // slides overlay up
+    TweenMax.to(".overlay", 1, {
      delay: 1,
      top: "-100%",
      ease: Expo.easeInOut
-})
-//  overlay img slides up
-TweenMax.to(".overlay-img", 2, {
+    })
+    //  overlay img slides up
+    TweenMax.to(".overlay-img", 2, {
       opacity: 0,
       y: -60,
       ease: Expo.easeInOut
-})
-// slides logo box to right
-TweenMax.from(".logo", 3.5, {
-          delay: 0.6,
-          // opacity: 0,
-          // x: -20,
-          width: 0,
-          ease: Expo.easeInOut
-    });
-// slides logo to right
-TweenMax.from(".main-logo", 3.5, {
-          delay: 0.6,
-          // opacity: 0,
-          // x: -20,
-          width: 0,
-          ease: Expo.easeInOut
-    });
-// slides right (grey) side over left to right
-TweenMax.from(".right", 3.5, {
-          delay: 0.6,
-          // opacity: 0,
-          // x: -20,
-          width: 0,
-          ease: Expo.easeInOut
-    });
-// slides product title up
- TweenMax.from(".product-title", 2, {
-         delay: 1.6,
-         opacity: 0,
-         y: 20,
-         ease: Expo.easeInOut
-   });
-// staggers right ul
-   TweenMax.staggerFrom(".right-sidebar ul li", 1, {
-            delay: 2.6,
-            opacity: 0,
-            y: 20,
-            ease: Power3.easeInOut
-      }, 0.08);
-// slides 'greatness' up
-      TweenMax.from(".left-bottom", 2, {
-          delay: 2.8,
-          opacity: 0,
-          y: 20,
-          ease: Expo.easeInOut
-    });
-// slides desc up
-     TweenMax.from(".desc", 2, {
-      delay: 1.8,
-      opacity: 0,
-      y: 20,
+    })
+    // slides logo box to right
+    TweenMax.from(".logo", 3.5, {
+      delay: 0.6,
+      // opacity: 0,
+      // x: -20,
+      width: 0,
       ease: Expo.easeInOut
-});
-// slides color up
-TweenMax.from(".color", 2, {
- delay: 1.8,
- opacity: 0,
- y: 20,
- ease: Expo.easeInOut
-});
-// slides price up
-TweenMax.from("#price", 2, {
+    });
+    // slides logo to right
+    TweenMax.from(".main-logo", 3.5, {
+      delay: 0.6,
+      // opacity: 0,
+      // x: -20,
+      width: 0,
+      ease: Expo.easeInOut
+    });
+    // slides right (grey) side over left to right
+    TweenMax.from(".right", 3.5, {
+      delay: 0.6,
+      // opacity: 0,
+      // x: -20,
+      width: 0,
+      ease: Expo.easeInOut
+    });
+    // slides product title up
+     TweenMax.from(".product-title", 2, {
+       delay: 1.6,
+       opacity: 0,
+       y: 20,
+       ease: Expo.easeInOut
+      });
+    // staggers right ul
+     TweenMax.staggerFrom(".right-sidebar ul li", 1, {
+        delay: 2.6,
+        opacity: 0,
+        y: 20,
+        ease: Power3.easeInOut
+    }, 0.08);
+    // slides 'greatness' up
+    TweenMax.from(".left-bottom", 2, {
+        delay: 2.8,
+        opacity: 0,
+        y: 20,
+        ease: Expo.easeInOut
+    });
+    // slides desc up
+   TweenMax.from(".desc", 2, {
+        delay: 1.8,
+        opacity: 0,
+        y: 20,
+        ease: Expo.easeInOut
+        });
+    // slides color up
+    TweenMax.from(".color", 2, {
+       delay: 1.8,
+       opacity: 0,
+       y: 20,
+       ease: Expo.easeInOut
+    });
+    // slides price up
+    TweenMax.from("#price", 2, {
       delay: 2,
       opacity: 0,
       y: 20,
       ease: Expo.easeInOut
-});
-//slides buy now up
-TweenMax.from(".btn", 2, {
+    });
+    //slides buy now up
+    TweenMax.from(".btn", 2, {
       delay: 2.2,
       opacity: 0,
       y: 20,
       ease: Expo.easeInOut
-});
-// staggers media icons up
-TweenMax.staggerFrom(".media ul li", 1, {
-          delay: 3.6,
-          opacity: 0,
-          y: 20,
-          ease: Power3.easeInOut
+    });
+    // staggers media icons up
+    TweenMax.staggerFrom(".media ul li", 1, {
+      delay: 3.6,
+      opacity: 0,
+      y: 20,
+      ease: Power3.easeInOut
     }, 0.08);
-    TweenMax.from(".product img", 5, {
-         delay: 2,
-         // opacity: 0,
-         // y: 20,
-         scale: 0,
-         ease: Expo.easeOut
-   });
+    // fades productimg in
+        TweenMax.from(".product img", 3, {
+       delay: 2,
+       // opacity: 0,
+       // y: 20,
+       scale: 0,
+       ease: Expo.easeOut
+      });
 
-</script>
+  </script>
 
 
   </body>
